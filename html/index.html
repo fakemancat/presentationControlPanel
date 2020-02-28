@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voiceControl</title>
+
+    <style>
+        div {
+            display: flex;
+        }
+
+        button {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            flex-direction: row;
+            height: 50px;
+            margin-top: calc(50vh - 100px);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="a('back')">Назад</button>
+        <button onclick="a('next')">Вперёд</button>
+    </div>
+
+    <script>
+        const socket = new WebSocket('ws://192.168.137.1:3000');
+
+        socket.onopen = () => console.log('connected');
+
+        function a(text) {
+            socket.send(text);
+        }
+    </script>
+</body>
+</html>
