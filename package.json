@@ -1,7 +1,7 @@
 {
   "name": "presentationControlPanel",
   "version": "0.0.1-beta.1",
-  "description": "Управление клавишами на компьютере с помощью голоса используя голосовой ввод на телефоне",
+  "description": "Управление презентацией на ПК с телефона",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
